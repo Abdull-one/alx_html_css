@@ -1,8 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 0;
+  height: 100vh; /* Optional, but recommended for full-height layout */
+  margin: 0; /* Optional, but recommended to remove default margins */
 }
 
 main {
@@ -20,14 +20,3 @@ aside {
   flex: 1;
   overflow-y: auto;
 }
-
-
-3. Paste the code into your styles.css file.
-4. Save the file.
-
-Make sure your HTML file is linked to the styles.css file:
-
-
-<head>
-  <link rel="stylesheet" href="styles.css">
-</head>
