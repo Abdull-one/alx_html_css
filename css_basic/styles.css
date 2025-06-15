@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+}
+
+article {
+  flex: 2;
+  overflow-y: auto;
+}
+
+aside {
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+3. Paste the code into your styles.css file.
+4. Save the file.
+
+Make sure your HTML file is linked to the styles.css file:
+
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
