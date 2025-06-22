@@ -1,0 +1,57 @@
+/* 7-styles.css */
+
+/* Import global styling from base */
+@import url('base.css');
+
+/* Import existing styles from previous tasks */
+@import url('4-styles.css');
+
+/* -------------------- What We Do Section Animations -------------------- */
+
+.what-we-do .service {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.what-we-do .service:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+/* Optional: Add a subtle continuous rotation */
+/* .what-we-do .service i {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+/* -------------------- Our Results Section Animations -------------------- */
+
+.our-results .result {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.our-results .result:hover {
+    transform: scale(1.1); /* Slightly scale up */
+    opacity: 0.8;           /* Fade slightly */
+}
+
+/* Optional: Bouncing Animation (Continuous) */
+/* .our-results .result h3 {
+    animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+} */
