@@ -1,0 +1,71 @@
+/* 8-styles.css */
+
+/* Import global styling from base */
+@import url('base.css');
+
+/* Import existing styles from previous tasks */
+@import url('7-styles.css');
+
+/* --- Mobile Menu Styles --- */
+
+.hamburger-icon {
+    display: none;          /* Hide by default on larger screens */
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-menu {
+    /* Add transition for smooth animation */
+    transition: max-height 0.3s ease-out;
+    overflow: hidden; /* Hide overflowing content during transition */
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li {
+    display: block;  /* Stack list items vertically */
+    margin-bottom: 10px;
+}
+
+.nav-menu ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* Set text color to be visible */
+}
+
+.nav-menu ul li a:hover {
+    background-color: #eee;
+}
+
+/* Media query for smaller screens (480px or less) */
+@media (max-width: 480px) {
+    .hamburger-icon {
+        display: block;      /* Show hamburger icon */
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;          /* Position right below the header */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        max-height: 0;      /* Initially hide the menu */
+        z-index: 10; /* Ensure menu appears above other content */
+    }
+
+    .nav-menu ul li {
+        text-align: center; /* Center the menu items */
+    }
+
+    /* Class to show the menu */
+    .nav-menu.active {
+        max-height: 500px; /* Show menu by setting max-height to a large value. Adjust as needed */
+    }
+}
