@@ -1,0 +1,36 @@
+/* 4-styles.css */
+
+/* Import global styling from base */
+@import url('base.css');
+
+/* Import existing styles from previous tasks */
+@import url('3-styles.css');
+
+/* Footer styles */
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff;            /* White text color */
+    padding: 20px 0;         /* Adjust as needed */
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5em; /* Adjust icon size as needed */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer .social-links a:hover {
+    color: #007bff; /* Example hover color - use your brand color */
+}
