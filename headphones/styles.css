@@ -1,0 +1,72 @@
+/* 6-styles.css */
+
+/* Import global styling from base */
+@import url('base.css');
+
+/* Import existing styles from previous tasks */
+@import url('4-styles.css');
+
+/* Remove background-color from our-results since we will use a transparent background */
+.our-results {
+    padding: 80px 0;
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of pentagons */
+    overflow: hidden;     /* Prevents pentagons from overflowing the section */
+}
+
+/* styles.css */
+
+.our-results .pentagon {
+  position: absolute;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  background-color: rgba(0, 123, 255, 0.3); /* Adjust color and transparency */
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); /* Creates the pentagon shape */
+  z-index: 0; /* Place pentagons behind content */
+  animation: float 5s infinite alternate;
+}
+
+.our-results .pentagon:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.our-results .pentagon:nth-child(2) {
+  top: 30%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.our-results .pentagon:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.our-results .pentagon:nth-child(4) {
+  top: 70%;
+  left: 70%;
+  animation-delay: 3s;
+}
+
+.our-results .pentagon:nth-child(5) {
+  top: 20%;
+  left: 70%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px); /* Adjust float distance */
+  }
+}
+
+/* Ensure the content is above the background pentagons */
+.our-results > * {
+    position: relative;
+    z-index: 1;
+}
