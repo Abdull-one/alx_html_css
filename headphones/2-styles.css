@@ -1,0 +1,63 @@
+/* 2-styles.css */
+
+/* Import global styling from base */
+@import url('base.css');
+
+/* Import existing styles from previous task */
+@import url('1-styles.css');
+
+/* Our results section styles */
+.our-results {
+    padding: 80px 0; /* Adjust as needed */
+    text-align: center;
+    background-color: #f9f9f9; /* Light background to differentiate the section */
+}
+
+.our-results h2 {
+    font-size: 2.5em; /* Adjust as needed */
+    margin-bottom: 30px;
+}
+
+.our-results .results {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.our-results .result {
+    width: 250px; /* Adjust as needed */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff; /* White background for each result */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.our-results .result i { /* If using icons */
+    font-size: 2em; /* Adjust icon size as needed */
+    color: #00a36c; /* Example color */
+    margin-bottom: 15px;
+}
+
+.our-results .result h3 {
+    font-size: 2em; /* Adjust as needed */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.our-results .result p {
+    font-size: 1.1em; /* Adjust as needed */
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .our-results .results {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center;
+    }
+
+    .our-results .result {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+}
