@@ -1,0 +1,98 @@
+/* 1-styles.css */
+
+/* Import global styling from base */
+@import url('base.css');
+
+
+/* Font import */
+@font-face {
+  font-family: 'holberton_school-icon';
+  src:  url('fonts/holberton_school-icon.eot'); /* IE9 Compat Modes */
+  src:  url('fonts/holberton_school-icon.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/holberton_school-icon.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+        url('fonts/holberton_school-icon.woff') format('woff'), /* modern browsers */
+        url('fonts/holberton_school-icon.svg#holberton_school-icon') format('svg'); /* iOS 4.1- */
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+  font-family: 'holberton_school-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.holberton_school-icon-ic_sound:before {
+  content: "\e900";
+}
+.holberton_school-icon-ic_video:before {
+  content: "\e901";
+}
+.holberton_school-icon-ic_music:before {
+  content: "\e902";
+}
+.holberton_school-icon-ic_hearing:before {
+  content: "\e903";
+}
+
+/* What we do section styles */
+.what-we-do {
+    padding: 80px 0;  /* Adjust as needed */
+    text-align: center;
+}
+
+.what-we-do h2 {
+    font-size: 2.5em; /* Adjust as needed */
+    margin-bottom: 30px;
+}
+
+.what-we-do .services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.what-we-do .service {
+    width: 300px;      /* Adjust as needed */
+    margin: 20px;     /* Adjust as needed */
+    padding: 20px;
+    border: 1px solid #ccc;  /* Add a border for visual separation */
+    border-radius: 5px;
+}
+
+.what-we-do .service i {
+    font-size: 3em;  /* Adjust icon size as needed */
+    color: #007bff;  /* Example color - use your brand color */
+    margin-bottom: 15px;
+}
+
+.what-we-do .service h3 {
+    font-size: 1.5em;  /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+.what-we-do .service p {
+    font-size: 1em;   /* Adjust as needed */
+    line-height: 1.4;
+}
+
+
+/* Responsive design adjustments (example) */
+@media (max-width: 768px) {
+    .what-we-do .services {
+        flex-direction: column;  /* Stack items on smaller screens */
+        align-items: center;
+    }
+
+    .what-we-do .service {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+}
